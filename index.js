@@ -1,12 +1,20 @@
-
+const first = document.querySelector('#first');
+const second = document.querySelector('#second');
 const video = document.getElementById('video')
+const start = document.getElementById('start')
 
-Promise.all([
-  faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
-  faceapi.nets.faceLandmark68Net.loadFromUri('/models'),
-  faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
-  faceapi.nets.faceExpressionNet.loadFromUri('/models')
-]).then(startVideo)
+start.addEventListener('click', async()=> {
+  await Promise.all([
+    faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
+    faceapi.nets.faceLandmark68Net.loadFromUri('/models'),
+    faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
+    faceapi.nets.faceExpressionNet.loadFromUri('/models'),
+  ]).then(() => {
+    startVideo();
+    first.style.display = "none";
+    second.style.display = "block";
+  });
+})
 
 function startVideo() {
   navigator.getUserMedia(
@@ -29,4 +37,4 @@ video.addEventListener('play', () => {
     faceapi.draw.drawFaceLandmarks(canvas, resizedDetections)
     faceapi.draw.drawFaceExpressions(canvas, resizedDetections)
   }, 100)
-})
+});

@@ -4,25 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Disclosure</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <script defer src="face-api.min.js"></script>
 <script defer src="index.js"></script>
-<style>
-    body {
-      margin: 0;
-      padding: 0;
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    canvas {
-        position: absolute;
-    }
-</style>
+
 <body>
-    <video id='video' width="720" height="560" autoplay muted></video>
+    <img src="7.jpg" alt="" width="60" height="30" class="logo">
+    <h2>Face Disclosure</h2>
+    <div id="first">
+        <img src="3.jpg" alt="" class="hide" id="hide" width="600" height="500">
+        <div class="left">
+            <p>You are welcome to Disclosure App</p>
+            <ul>
+                <li>Read between the pixels and discover your emotions with ease!</li>
+                <li>Experience a new level with our advanced emotion detection technology!</li>
+                <li>See beyond the surface and unlock the secrets of your emotions with just one click!</li>
+                <li class="here">👇 click here!</li>
+            </ul>
+        </div>
+        <br><br>
+        <button id="start">Start</button>
+    </div>
+    <div id="second" style="display: none;">
+        <video id='video' width="720" height="560" autoplay muted></video>
+    </div>
 </body>
 </html>

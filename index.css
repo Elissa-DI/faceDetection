@@ -1,0 +1,84 @@
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: black;
+      font-family: cursive;
+    }
+    canvas {
+        position: absolute;
+        top: 78px;
+        left: 200px;
+    }
+    button {
+        width: 120px;
+        height: 30px;
+        color: white;
+        background-color: aqua;
+        border: none;
+        border-radius: 2px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 1s ease;
+        margin: 0px 0px 0px 550px;
+    }
+    button:hover {
+        border: 1.5px solid aqua;
+        background-color: white;
+        color: aqua;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+    h2 {
+        color: white;
+        margin-left: 550px;
+    }
+    .logo {
+        float: left;
+        margin-left: 540px;
+    }
+    #first {
+        color: white;
+    }
+    #second {
+        background-color: black;
+        color: white;
+    }
+    .left {
+        float: right;
+        margin-top: 80px;
+    }
+    .left p {
+        font-size: 25px;
+        animation: color 3s infinite;
+    }
+    @keyframes color {
+        0% {
+            color: blue;
+        }
+        35%{
+            color: rgb(61, 19, 96);
+        }
+        70%{
+            color: rgb(81, 12, 86);
+        }
+        100%{
+            color: black;
+        }
+    }
+    ul {
+        text-decoration: none;
+        list-style: none;
+        font-size: 15px;
+    }
+    li {
+        margin-top: 5px;
+    }
+    .here {
+        margin-top: 100px;
+        font-size: 40px;
+    }
+    video {
+        margin-left: 200px;
+    }
