@@ -38,3 +38,7 @@ video.addEventListener('play', () => {
     faceapi.draw.drawFaceExpressions(canvas, resizedDetections)
   }, 100)
 });
+
+window.onload = function () {
+  alert("Beware, it require high internet connectivity🤘")
+}
